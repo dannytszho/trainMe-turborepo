@@ -11,18 +11,9 @@
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "turbo run storybook --scope='ui' --no-deps"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.10",
-    "@storybook/addon-actions": "^6.4.22",
-    "@storybook/addon-essentials": "^6.4.22",
-    "@storybook/addon-interactions": "^6.4.22",
-    "@storybook/addon-links": "^6.4.22",
-    "@storybook/react": "^6.4.22",
-    "@storybook/testing-library": "^0.0.11",
-    "babel-loader": "^8.2.5",
     "prettier": "latest",
     "turbo": "latest"
   },

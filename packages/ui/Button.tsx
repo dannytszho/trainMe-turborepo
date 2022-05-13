@@ -1,9 +1,17 @@
 import * as React from 'react'
 
-export const Button = () => {
+interface IProps {
+  description: string
+}
+
+const Button = ({ description }: IProps) => {
   return (
-    <button type="button" className="h-16 w-16 bg-blue-500 hover:bg-blue-700">
-      Boop
+    <button
+      type="button"
+      className="cursor-pointer rounded-full bg-blue-400 px-4 py-1 text-white drop-shadow-lg"
+    >
+      {description}
     </button>
   )
 }
+export default Button
