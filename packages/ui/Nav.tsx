@@ -1,10 +1,8 @@
 import Link from 'next/link'
 import Button from './Button'
-import useTheme from './hooks/useTheme'
+import ThemeButton from './ThemeButton'
 
 const Nav = () => {
-  const [setTheme, colorTheme] = useTheme()
-
   return (
     <header className="mx-auto flex max-w-7xl justify-between p-5">
       <div className="m-4 flex items-center space-x-5">
@@ -25,13 +23,7 @@ const Nav = () => {
         </div>
       </div>
       <div className="flex items-center space-x-5">
-        <button
-          className="h-6 w-6 rounded-full bg-black text-black drop-shadow-xl dark:bg-white"
-          type="button"
-          onClick={() => setTheme(colorTheme)}
-        >
-          {colorTheme === 'light' ? '' : ''}
-        </button>
+        <ThemeButton />
       </div>
     </header>
   )
