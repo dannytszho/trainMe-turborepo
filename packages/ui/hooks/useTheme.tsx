@@ -9,7 +9,6 @@ const useTheme = () => {
     root.classList.remove(colorTheme)
     root.classList.add(theme)
   }, [theme, colorTheme])
-  console.log(colorTheme)
 
   return [setTheme, colorTheme] as const
 }

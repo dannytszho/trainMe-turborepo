@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import Button from './Button'
-import ThemeButton from './ThemeButton'
+import NavButton from './buttons/NavButton'
+import ThemeButton from './buttons/ThemeButton'
 
 const Nav = () => {
   return (
@@ -11,15 +11,9 @@ const Nav = () => {
           <Link href="/about">
             <h3 className="cursor-pointer p-1">About</h3>
           </Link>
-          <Link href="/aware">
-            <Button description="Awareness" />
-          </Link>
-          <Link href="/stopwatch">
-            <Button description="Stopwatch" />
-          </Link>
-          <Link href="/players">
-            <Button description="Players" />
-          </Link>
+          <NavButton description="Awareness" href="/aware" />
+          <NavButton description="Stopwatch" href="/stopwatch" />
+          <NavButton description="Players" href="/players" />
         </div>
       </div>
       <div className="flex items-center space-x-5">
